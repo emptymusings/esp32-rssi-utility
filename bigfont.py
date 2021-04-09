@@ -37,6 +37,12 @@ def text_large(text, x, y, display):
         elif (text[i] == "z" or text[i] == "Z"): Z(xval, y, display)
         elif (text[i] == "."): period(xval, y, display)
         elif (text[i] == "-"): minus(xval, y, display)
+        elif (text[i] == "="): equal(xval, y, display)
+        elif (text[i] == ","): comma(xval, y, display)
+        elif (text[i] == ":"): colon(xval, y, display)
+        elif (text[i] == "/"): slash(xval, y, display)
+        elif (text[i] == "?"): question(xval, y, display)
+        elif (text[i] == "&"): amp(xval, y, display)
         elif (text[i] == "0"): zero(xval, y, display)
         elif (text[i] == "1"): one(xval, y, display)
         elif (text[i] == "2"): two(xval, y, display)
@@ -241,7 +247,51 @@ def period(x, y, display):
 
 def minus(x, y, display):
     display.line((x)+2,(y)+8,(x)+8,(y)+8,1)
+           
+def equal(x, y, display):
+    display.line((x)+2,(y)+6,(x)+8,(y)+6,1)
+    display.line((x)+2,(y)+9,(x)+8,(y)+9,1)
+
+def comma(x, y, display):
+    display.line((x)+1,(y)+13,(x)+1,(y)+14,1)
+    display.line((x)+2,(y)+13,(x)+2,(y)+17,1)
+    display.line((x)+1,(y)+17,(x)+2,(y)+17,1)
+
+def colon(x, y, display):
+    display.line((x)+1,(y)+14,(x)+2,(y)+14,1)
+    display.line((x)+1,(y)+15,(x)+2,(y)+15,1)
+    display.line((x)+1,(y)+6,(x)+2,(y)+6,1)
+    display.line((x)+1,(y)+5,(x)+2,(y)+5,1)
+
+def slash(x, y, display):
+    display.line((x)+9,(y)+1,(x)+1,(y)+15,1)
         
+def question(x, y, display):
+    display.line((x)+5,(y)+14,(x)+6,(y)+14,1)
+    display.line((x)+5,(y)+15,(x)+6,(y)+15,1)
+    display.line((x)+5,(y)+10,(x)+5,(y)+8,1)
+    display.line((x)+5,(y)+8,(x)+8,(y)+6,1)
+    display.line((x)+8,(y)+6,(x)+9,(y)+2,1)
+    display.line((x)+8,(y)+1,(x)+4,(y)+1,1)
+
+def amp(x, y, display):
+    #&
+    display.line((x)+4,(y)+7,(x)+2,(y)+5,1)
+    display.line((x)+2,(y)+5,(x)+2,(y)+3,1)
+    display.line((x)+2,(y)+3,(x)+3,(y)+2,1)
+    display.line((x)+3,(y)+2,(x)+4,(y)+1,1)
+    display.line((x)+4,(y)+1,(x)+6,(y)+1,1)
+    display.line((x)+6,(y)+1,(x)+7,(y)+2,1)
+    display.line((x)+7,(y)+2,(x)+8,(y)+3,1)
+    display.line((x)+8,(y)+3,(x)+8,(y)+4,1)
+    display.line((x)+8,(y)+4,(x)+6,(y)+6,1)
+    display.line((x)+6,(y)+6,(x)+1,(y)+10,1)
+    display.line((x)+1,(y)+10,(x)+1,(y)+13,1)
+    display.line((x)+1,(y)+13,(x)+3,(y)+15,1)
+    display.line((x)+3,(y)+15,(x)+6,(y)+15,1)
+    display.line((x)+6,(y)+15,(x)+9,(y)+9,1)
+    display.line((x)+4,(y)+8,(x)+10,(y)+15,1)
+
 def zero(x, y, display):
     display.line((x)+10,(y)+5,(x)+8,(y)+1,1)
     display.line((x)+8,(y)+1,(x)+4,(y)+1,1)
