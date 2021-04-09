@@ -8,20 +8,25 @@
 # in the github above
 
 from machine import SoftI2C, Pin
-import ssd1306
+import ssd1306, time
 
 class Display():
 
     def __init__(self, scl_pin=22, sda_pin=21, frequency=400000, width=128, height=64):
         i2c = SoftI2C(scl=Pin(scl_pin), sda=Pin(sda_pin), freq=frequency)
         self.display = ssd1306.SSD1306_I2C(width, height, i2c)
-        
+        self.display.invert(True)
         self.display.fill(1)
+        self.display.show()
+        time.sleep(2)
+        self.display.invert(False)
+        self.display.fill(0)
         self.display.show()
 
     def display_text(self, label1=None,label2=None,text_line1=None,text_line2=None,text_line3=None,text_line4=None, text_line5=None, show_immediately=True):
         # Clear the screen
-        self.display.fill_rect(0, 0, 128, 64, 0)
+        self.display.fill_rect(0, 0, 128, 16, 0)
+        self.display.fill_rect(0, 17, 128, 64, 0)
 
         # Determine if there is a value for the first label line
         if not label1 == None:
