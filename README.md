@@ -1,5 +1,5 @@
 # esp32-rssi-utility
-A micropython utility to measure RSSI of the ESP-32's WiFi connection to find weak/dead spots in WiFi coverage.
+A very simple micropython utility to measure RSSI of the ESP-32's WiFi connection to find weak/dead spots in WiFi coverage.
 
 It should be noted that this is not a full tutorial, but simply documents the wiring and method to load the software.
 
