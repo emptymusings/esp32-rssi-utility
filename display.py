@@ -55,16 +55,16 @@ class Display():
 
     def display_wifi_signal(self, avg_rssi=-90):  
 
-        if avg_rssi >= -95:
+        if avg_rssi >= -80:
             self.display.fill_rect(85, 54, 6, 63, 1)
         
-        if avg_rssi >= -90:
+        if avg_rssi >= -70:
             self.display.fill_rect(95, 50, 6, 63, 1)
         
-        if avg_rssi >= -80:
+        if avg_rssi >= -60:
             self.display.fill_rect(105, 46, 6, 63, 1)
 
-        if avg_rssi >= -67:
+        if avg_rssi >= -50:
             self.display.fill_rect(115, 42, 6, 63, 1)
 
         self.display_avg_rssi(avg_rssi)

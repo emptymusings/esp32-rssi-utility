@@ -33,14 +33,14 @@ def connect():
 def get_rssi_strength(rssi):
     rssi_val = ''
         
-    if rssi > -67:
-        rssi_val = "Signal:Strong"
-    elif rssi > -80:
-        rssi_val = "Signal:So-So"
-    elif rssi > -90:
-        rssi_val = "Signal:Poor"
+    if rssi > -50:
+        rssi_val = "Signal:Great!"
+    elif rssi > -60:
+        rssi_val = "Signal:Fair"
+    elif rssi > -70:
+        rssi_val = "Signal:Weak"
     else:
-        rssi_val = "Signal:Unuseable"
+        rssi_val = "Signal:Not Good"
 
     return rssi_val
 
