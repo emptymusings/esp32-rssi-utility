@@ -39,3 +39,9 @@ password = "<your WiFi network's password>"
 Use your favorite way to load a python project to your board, and the program should connect to your wireless network and be able to start displaying RSSI information now.
 ## Fin
 That's it.
+
+## Resources
+- [Micorpython docs](https://docs.micropython.org/en/latest/esp32/quickref.html)
+- [Installing micropython on ESP boards (and other useful tutorials)](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/)
+- [VS Code](https://code.visualstudio.com/download)
+- [Pymakr VS Code Extension](https://github.com/pycom/pymakr-vsc)
