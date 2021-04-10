@@ -1,18 +1,21 @@
 from machine import Pin
 import network, socket, time # import micropython items
 
+import connection
 import secrets
 from display import Display
-
-connection_pin = Pin(2, Pin.OUT)
-connection_pin.value(0)
 
 # Initialize the display
 display = Display()
 
+#display.is_inverted = True
+
 # Get the Super Secret SSID and network password
 SSID = secrets.SSID
 password = secrets.password
+connection_pin = Pin(2, Pin.OUT)
+connection_pin.value(0)
+
 
 # Initialize the wireless NIC
 wifi = network.WLAN(network.STA_IF)
@@ -56,13 +59,14 @@ def connect():
     print("{} {}".format(SSID, status))
 
 
-def get_rssi_strength(rssi):
+def get_rssi_strength(rssi_quality):
+    
     rssi_val = ''    
-    if rssi > -50:
+    if rssi_quality == 4:
         rssi_val = "Signal:Great!"
-    elif rssi > -60:
+    elif rssi_quality == 3:
         rssi_val = "Signal:OK"
-    elif rssi > -70:
+    elif rssi_quality == 2:
         rssi_val = "Signal:Weak"
     else:
         rssi_val = "Signal:Not Good"
@@ -78,9 +82,12 @@ def show_rssi(rssis):
 
     rssis.append(rssi)
     avg_rssi = round(sum(rssis) / len(rssis))
-
-    rssi_val = get_rssi_strength(rssi)
+    rssi_quality = connection.rssi_quality(rssi)
+    rssi_val = get_rssi_strength(rssi_quality)
     
+    if rssi < -85:
+        connect()
+        
     display.display_text('WiFi STRENGTH', '%s' % essid, '{}'.format(rssi_val), show_immediately=False)
     display.display_wifi_signal(avg_rssi)
 
