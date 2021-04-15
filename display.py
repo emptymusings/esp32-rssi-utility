@@ -121,4 +121,5 @@ class Display():
         bigfont.text_large("RSSI", xval, label_y, self.display, self.color())
         bigfont.text_large(rssi_text, xval, yval, self.display, self.color())
         self.display.text("(avg)", 50, 38, 1)
+        self.display.text("dBm", 39, 57, 1)
         self.display.show()
