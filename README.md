@@ -29,7 +29,7 @@ Then it struck me: there are spots in my house with poor WiFi reception.  Findin
 
 ## Assumptions
 This document will not cover certain requirements, and it is assumed that you have already:
-- Flashed the ESP-32 with micropython;
+- [Flashed the ESP-32 with micropython](https://docs.micropython.org/en/latest/esp32/tutorial/intro.html#esp32-intro);
 - Installed an IDE to code python and upload the project to your ESP-32 or know how to do so with a text editor and python package;
 
 ## Wiring 
