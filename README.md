@@ -20,6 +20,9 @@ Then it struck me: there are spots in my house with poor WiFi reception.  Findin
 - A breadboard and 4 jumper wires
 - A portable cell phone battery charger or similar method to power your ESP with external USB power or 5v
 
+## Limitations
+Espressif's ESP-WROOM-32 development board does not support wireless AC connections.  As such, you will need to connect it to the 2.4GHz (wireless N) band.
+
 ## Assumptions
 This document will not cover certain requirements, and it is assumed that you have already:
 - [Flashed the ESP-32 with micropython](https://docs.micropython.org/en/latest/esp32/tutorial/intro.html#esp32-intro);
