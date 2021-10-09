@@ -21,7 +21,7 @@ connection_pin.value(0)
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True)
 
-
+# Connect to the network
 def connect():
     """Function to connect to the wireless network."""
     print("Connecting to WiFi")
@@ -59,20 +59,22 @@ def connect():
     print("{} {}".format(SSID, status))
 
 
+# Translate the quality to English
 def get_rssi_strength(rssi_quality):
     
     rssi_val = ''    
     if rssi_quality == 4:
-        rssi_val = "Signal:Great!"
+        rssi_val = "Signal: HD Video"
     elif rssi_quality == 3:
-        rssi_val = "Signal:OK"
+        rssi_val = "Signal: SD Video"
     elif rssi_quality == 2:
-        rssi_val = "Signal:Weak"
+        rssi_val = "Signal: Browsing"
     else:
-        rssi_val = "Signal:Not Good"
+        rssi_val = "Signal: Not Good"
 
     return rssi_val
 
+# Get the RSSI and send it to the display
 def show_rssi(rssis):
     rssi = wifi.status('rssi')
     essid = wifi.config('essid')
@@ -91,6 +93,7 @@ def show_rssi(rssis):
     display.display_text('WiFi STRENGTH', '%s' % essid, '{}'.format(rssi_val), show_immediately=False)
     display.display_wifi_signal(avg_rssi)
 
+# Determine the RSSI value
 def get_rssi():
     rssis = []
 
