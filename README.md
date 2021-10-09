@@ -3,13 +3,6 @@ A very simple micropython utility to measure RSSI of the ESP-32's WiFi connectio
 
 It should be noted that this is not a full tutorial, but simply documents the wiring and method to load the software.
 
-# Index
-- [Meaningless Background](#meaningless-background)
-- [Requirements](#requirements)
-- [Assumptions](#assumptions)
-- [Wiring](#wiring)
-- [Loading the Software](#loading-the-software)
-- [Resources](#resources)
 ## Meaningless Background
 This is a rather simple project I started to familiarize myself with the ESP-32 and the maker space.
 
