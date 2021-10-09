@@ -39,7 +39,7 @@ This document will not cover certain requirements, and it is assumed that you ha
 - Pin 22 from the ESP-32 connects to the display's SCL pin
 - Pin 21 from the ESP-32 connects to the display's SDA pin
 ## Loading the Software
-Before you load the software, you should use your favorite micropython IDE (I like VS Code, but uPyCraft or similar will work) to add a file named `secrets.py` to the application's root folder.  Inside the `secrets.py` file, add the following code (replacing the SSID and password with your network connection information):
+Before you load the software, you should use your favorite micropython IDE (I like VS Code, but uPyCraft or similar will work) to add a file named `secrets.py` to the application's root folder.  Inside the `secrets.py` file, add the following code (replacing the values within the quotes for SSID and password with your network connection information):
 ```
 SSID = "MySSID"
 password = "MySuperSecretPassword"
