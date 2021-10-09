@@ -33,7 +33,7 @@ This document will not cover certain requirements, and it is assumed that you ha
 - Installed an IDE to code python and upload the project to your ESP-32 or know how to do so with a text editor and python package;
 
 ## Wiring 
-(TODO: Find a way to make a pretty image of the wiring)
+![](./assets/RSSI%20Detector.png)
 - The 3.3V from the ESP-32 connects to the display's VCC pin
 - The GND from the ESP-32 connects to the display's GND pin
 - Pin 22 from the ESP-32 connects to the display's SCL pin
