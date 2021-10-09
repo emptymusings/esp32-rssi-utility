@@ -53,3 +53,4 @@ That's it.
 - [Installing micropython on ESP boards (and other useful tutorials)](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/)
 - [VS Code](https://code.visualstudio.com/download)
 - [Pymakr VS Code Extension](https://github.com/pycom/pymakr-vsc)
+- [Foundation used for big fonts](https://github.com/nickpmulder/ssd1306big)
