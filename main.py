@@ -60,9 +60,9 @@ def connect():
 
 
 # Translate the quality to English
-def get_rssi_strength(rssi_quality):
-    
+def get_rssi_strength(rssi_quality):    
     rssi_val = ''    
+    
     if rssi_quality == 4:
         rssi_val = "Signal: HD Video"
     elif rssi_quality == 3:
@@ -103,8 +103,10 @@ def get_rssi():
         
         is_connected = wifi.isconnected()
 
-        if (is_connected):            
+        if (is_connected):
+            connection_pin.value(0)
             show_rssi(rssis)
+            connection_pin.value(1)
         else:
             print("Not connected, not retrieving RSSI info")
             display.display_text('WiFi STRENGTH', 'STATUS: Not Connected', '%s' % SSID)

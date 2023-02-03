@@ -41,6 +41,20 @@ SSID = "MySSID"
 password = "MySuperSecretPassword"
 ```
 Use your favorite way to load a python project to your board, and the program should connect to your wireless network and be able to start displaying RSSI information now.
+
+## Connecting from Code in Windows
+I use the Pymakr extension to handle all of the file transfers
+
+## Transfering files in Linux (Arch)
+I couldn't get Pymakr to work well for file transfers using Pymakr, and have taken to using `rshell` instead.  From the directory in which your files are:
+```
+rshell -p /dev/ttyUSB0
+```
+Press the reset button on the ESP32 while its attempting to connect REPL
+```
+cp *.py /pyboard/
+```
+
 ## Fin
 That's it.
 
@@ -50,3 +64,4 @@ That's it.
 - [VS Code](https://code.visualstudio.com/download)
 - [Pymakr VS Code Extension](https://github.com/pycom/pymakr-vsc)
 - [Foundation used for big fonts](https://github.com/nickpmulder/ssd1306big)
+
